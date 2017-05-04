@@ -45,8 +45,8 @@ when 10,11
      "Muy bien eres de los mejores!!!"
   when 9
      "Que buena nota aunque falto poco para ser de los mejores"
-    when 8
-       "Puedes mejorar pero es una nota promedio"
+  when 8
+     "Puedes mejorar pero es una nota promedio"
   when 7
      "Estas muy cerca del limite puedes mejorar"
   when 6

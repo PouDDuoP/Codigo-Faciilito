@@ -25,4 +25,4 @@ saludo { puts "Hola PouD" }
 # ejemplo: saludo()
 
 # Cuando utilziar yield: es nuestra opcion por defecto, en caso de no existir razon para alamcenar la variable
-  # tambien es mas rapido que cuando se declara el argumento "&" 
+  # tambien es mas rapido que cuando se declara el argumento "&"

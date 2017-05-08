@@ -1,0 +1,58 @@
+html,body{
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+
+}
+#logo{
+  font-size: 1.2em;
+  font-family: 'Love Ya Like A Sister', cursive;
+  // font-family: 'Press Start 2P', cursive;
+  font-style: italic;
+}
+// a:hover{
+//   background-color: #51565E;
+//   color: #DAE8FF;
+// }
+.no-margin{
+  margin: 0px;
+}
+.btn{
+  background-color: inherit;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 10px 12px;
+}
+.be-purple{
+  background-color: #5613FF;
+}
+.white{
+  color: white;
+}
+.large-padding{
+  padding: 10px 7px;
+}
+.field{
+  margin-top: 1em;
+}
+.top-space{
+  margin-top: 1em;
+}
+.from-control{
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  width: 100%;
+  display: block;
+  padding: 10px 0px;
+  font-size: 1.2em;
+}

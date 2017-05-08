@@ -1,8 +1,13 @@
 
 <h1>Hola mundo, este es mi blog</h1>
+<% link_to "Recurso con POST" ,"welcome/index", method: :post %>
 <%nombren = ["Uno","Dos","Tres","Cuatro","Cinco"]%>
 <%[1,2,3,4,5].each do |numero|%>
   <p>Numero: <%=nombren[numero-1]%></p>
 <%end%>
-<%nombre = "Kevin"%>
-<h2>Mi nombre es: <%="#{nombre} Alvarado" %> </h2>
+<%nombre = "Kevin"; apodo = "PouD"%>
+<h2>Mi nombre es: <%="#{nombre} Alvarado "+ apodo +""%> </h2>
+
+<%
+
+%>

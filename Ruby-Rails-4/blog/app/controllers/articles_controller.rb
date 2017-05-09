@@ -29,7 +29,9 @@ class ArticlesController < ApplicationController
   #POST /article
   def create
     # INSERT INTO
-    @article = Article.new(title: params[:article][:title], body: params[:article][:body])
+    @article = Article.new(articles_params)
+    # @article = Article.new(params[:article])
+    # @article = Article.new(title: params[:article][:title], body: params[:article][:body])
     # @article = Article.new(title: params[:article][:title], body: params[:article][:body])
 
     # @article.valid?
@@ -39,6 +41,9 @@ class ArticlesController < ApplicationController
     else
       render :new
     end
+  end
+  def edit
+    @article = Article.find(params[:id])
   end
   # DELETE /articles/:id
   def destroy
@@ -51,5 +56,18 @@ class ArticlesController < ApplicationController
   def update
     # UPDATE
     # @article.update_attributes({title: 'Nuevo titulo'})
+      @article = Article.find(params[:id])
+      if @article.update(articles_params)
+        redirect_to @article
+      else
+        render :edit
+      end
   end
+  # Strong params
+  private
+    def articles_params
+      params.require(:article).permit(:title,:body)
+      # se realiza un require sobre el nivel mas alto "article" y luego un permit en los que van en la peticion ":title,:body" que seran los campos permitidos
+    end
+
 end

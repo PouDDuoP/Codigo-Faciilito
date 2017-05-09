@@ -1,0 +1,19 @@
+<!-- Vistas parciales: es una manera de no reutilizar codigo, se asigna la logica de la vista atravez de un render -->
+<% name ||= "Asigna la varaible del pracial"%> <!--Si na variable name no esta definida asginale el valor "Crear"-->
+<h1><%= name%> Articulo</h1> <!-- Varaible name cullo valor debe ser asginado en la vista que realize el render -->
+<%= form_for(@article) do |f|%>
+  <% @article.errors.full_messages.each do |message|%>
+    <div class="be-purple white top-space">
+      * <%= message%>
+    </div>
+  <%end%>
+  <div class="field">
+    <%= f.text_field :title, placeholder: "Titulo", class:"from-control"%>
+  </div>
+  <div class="field">
+    <%= f.text_area :body, placeholder: "Escribe el articulo aqui", style:"height:250px;", class:"from-control" %>
+  </div>
+  <div class="field">
+    <%= f.submit "Guardar", class:"btn be-purple white"%>
+  </div>
+<%end%>

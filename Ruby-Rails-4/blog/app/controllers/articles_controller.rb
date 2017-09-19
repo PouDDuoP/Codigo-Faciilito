@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
-
-  #GET /articles
+  # todos los controladores heredan de ApplicationController
+  # a esta ruta se accede con el verbo GET y el path /articles (GET /articles)
   def index
     # SELECT * FROM articles
     # Article.all obtiene todos los registros del modelo
       # Tambien existe
         # Article.all.count muestra la cantidad de registro de la tabla
+    # variables "@articles" de clases que puede ser utulizadas tanto dentro como fuera del controlador
     @articles = Article.all
   end
   # GET /articles/:id
@@ -36,10 +37,12 @@ class ArticlesController < ApplicationController
 
     # @article.valid?
     # @article.invalid?
+    # para verificar que se valdo o invalido (retorna boolean)
     if @article.save
       redirect_to @article
     else
       render :new
+    # redner :new = la vista a utilizar no es la de create, sino la de new  
     end
   end
   def edit

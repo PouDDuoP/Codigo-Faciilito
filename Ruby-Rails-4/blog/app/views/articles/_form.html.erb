@@ -2,13 +2,20 @@
 <% name ||= "Asigna la varaible del pracial"%> <!--Si na variable name no esta definida asginale el valor "Crear"-->
 <h1><%= name%> Articulo</h1> <!-- Varaible name cullo valor debe ser asginado en la vista que realize el render -->
 <%= form_for(@article) do |f|%>
-  <% @article.errors.full_messages.each do |message|%>
+  <% @article.errors.full_messages.each do |message|
+    # full_messages es una representacion en cadena de cuando falla una validacion y el porque de la misma
+  %>
     <div class="be-purple white top-space">
       * <%= message%>
     </div>
   <%end%>
   <div class="field">
     <%= f.text_field :title, placeholder: "Titulo", class:"from-control"%>
+    <!--
+        text_field es el input tipo text pero escrito con los helpers de rails
+        :title = es el atributo de la atabla a afectar
+        placeholder: "Titulo", class: es un hash de opciones aplicados al input
+    -->
   </div>
   <div class="field">
     <%= f.text_area :body, placeholder: "Escribe el articulo aqui", style:"height:250px;", class:"from-control" %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # post 'welcome/index' # en esta peticion ruby busca en el controlador weolcom la accion index
   # get 'welcome/index'
   # get "special", to: 'welcome#index'

@@ -1,5 +1,9 @@
 
 <h1>Hola mundo, este es mi blog</h1>
+<% if user_signed_in?%>
+  <p> Correo del usuario: <%= current_user.email %></p>
+  <p> Clave encriptada del usuario: <%= current_user.encrypted_password %></p>
+<%end%>
 <% link_to "Recurso con POST" ,"welcome/index", method: :post %>
 <%nombren = ["Uno","Dos","Tres","Cuatro","Cinco"]%>
 <!-- Ciclo For en rails  -->

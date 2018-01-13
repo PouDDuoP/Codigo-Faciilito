@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  # before_action configuracion de un callback
+  before_action :validate_user, except: [:show,:index]
   # todos los controladores heredan de ApplicationController
   # a esta ruta se accede con el verbo GET y el path /articles (GET /articles)
   def index
@@ -12,7 +14,7 @@ class ArticlesController < ApplicationController
   # GET /articles/:id
   def show
     # SELECT * FROM articles WHERE id
-    # Article.find(params[:id]) va a encontrar todos los registros por su id
+    # Article.find(params[:id]) va a encontrar todos los registros por su id y muestra el primero que consiga
       # Tambien existe
         # Article.find_by(<columna>:"<dato>") para buscar por otor atributo de la tabla
         # Article.where("<columna> LIKE ?","%datos%") para buscar por patrones en los datos
@@ -30,10 +32,12 @@ class ArticlesController < ApplicationController
   #POST /article
   def create
     # INSERT INTO
-    @article = Article.new(articles_params)
+    @article = current_user.articles.new(articles_params)
     # @article = Article.new(params[:article])
+      # es poco seguro debido que por agregar un campo con nombre "x"
+      # sabiendo como se llama el atributo la aplicacion aceptaria el campo como valido
     # @article = Article.new(title: params[:article][:title], body: params[:article][:body])
-    # @article = Article.new(title: params[:article][:title], body: params[:article][:body])
+    # @article = Article.create(title: params[:article][:title], body: params[:article][:body])
 
     # @article.valid?
     # @article.invalid?
@@ -42,7 +46,7 @@ class ArticlesController < ApplicationController
       redirect_to @article
     else
       render :new
-    # redner :new = la vista a utilizar no es la de create, sino la de new  
+    # redner :new = la vista a utilizar no es la de create, sino la de new
     end
   end
   def edit
@@ -66,8 +70,12 @@ class ArticlesController < ApplicationController
         render :edit
       end
   end
+
   # Strong params
   private
+    def validate_user
+      redirect_to new_user_session_path, notice: "Necesitas iniciar sesion"
+    end
     def articles_params
       params.require(:article).permit(:title,:body)
       # se realiza un require sobre el nivel mas alto "article" y luego un permit en los que van en la peticion ":title,:body" que seran los campos permitidos

@@ -8,7 +8,8 @@ def hola(apodo:"",nivel:0,**equipo) # asi se defienen en ruby 2
   else
     puts "intermedio #{apodo}"
   end
-  puts equipo
+  puts equipo # es recibido como un hash de opciones
+  puts equipo[:arma_d] # es recibido de equipo en su diccionario de opciones el objeto con nombre :arma_d
 end
 
 hola(apodo:"Poud", nivel: 50, casco:"Obcidian", arma_d:"Escama", arma_i:"Azura Su")

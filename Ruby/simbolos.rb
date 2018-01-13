@@ -1,4 +1,4 @@
-# Simbolos: es una cadena inmutable(no puedes modificar la cadena en tiempo de ejecusion)
+# Simbolos: es una cadena inmutable(no puedes modificar la cadena en tiempo de ejecucion)
 
 # cadena = "kevin"
 cadena = "kevin" #es inmutable por ser un simbolo no cambia

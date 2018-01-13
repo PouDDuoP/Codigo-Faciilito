@@ -10,5 +10,5 @@ end
 
  nombres = ["kevin","he","is","je","ke","da"]
  # hola_user "kevin","adrian","23",25, ":[]","}{}"
- hola_user "hola user:", nombres # muestra el array por que es interpretado como tal
- hola_user "hola user:", *nombres # para combiertir el arreglo en una lista de parametros se utiliza tambien el splat "*"
+ hola_user ("hola user:", nombres) # muestra el array por que es interpretado como tal
+ hola_user ("hola user:", *nombres) # para combiertir el arreglo en una lista de parametros se utiliza tambien el splat "*"

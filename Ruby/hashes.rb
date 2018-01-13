@@ -1,6 +1,6 @@
 # Hashes: un hash es una estructrua que almacena datos
 # la diferencia entre una hash y un arreglo es como podemos acceder a los datos que se almacenan
-# en uarreglo accedemos al elemento via la pososion o el indice del elemento
+# en un arreglo accedemos al elemento via la posicion o el indice del elemento
 # arreglo = ["Hola","Mundo"]
 # arreglo[1] # aca apuntamos a "Mundo"
 

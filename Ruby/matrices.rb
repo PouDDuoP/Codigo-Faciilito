@@ -5,7 +5,7 @@
 # caracterisiticas de matrices
 # => Cantidad de dimenciones: 2 dimenciones
 # => Los arreglos internos deben tener la misma cantida de elementos
-# => Clace Matrix => Todos los elementos deben ser numeros
+# => Clase Matrix => Todos los elementos deben ser numeros
 
 # arreglo = [1,2,3,4,,5[2,3,4,[3,4,5]]] # Matriz
 # arreglo = [1,2,3,4,5] # Arreglo

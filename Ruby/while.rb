@@ -11,45 +11,49 @@ vistoh = true
 
 index_man = 0
 
-#si hay mangas para ver y se esta subiendo
+# Si hay mangas para ver y Esta subido el manga
 # entoses abrir mangas
 
-# while (index_man < manga.length) && vistoh
-#   puts "viendo manga : #{manga[index_man]}"
-#   index_man += 1
-#
-#   #si nos manda 0 paramos la vista de m,anga, si no seguimos viendo mangas
-#   print "coloca 0 o una letra para detener mangas: "
-#   respuesta = gets().chomp.to_i
-#   # if respuesta == 0 || respuesta == ('a'..'z').to_a
-#   #   vistoh = false
-#   # end
-#
-#   #linea de codigo mas parecido a ruby
-#     # vistoh = false if respuesta == 0 || respuesta == ('a'..'z').to_a
-#       vistoh = respuesta != 0 || respuesta == ('a'..'z').to_a
-# end
+=begin
+	while (index_man < manga.length) && vistoh
+	  puts "viendo manga : #{manga[index_man]}"
+	  index_man += 1
+
+	  #si nos manda 0 paramos la vista de manga, si no seguimos viendo mangas
+	  print "coloca 0 o una letra para detener mangas: "
+	  respuesta = gets().chomp.to_i
+	  # if respuesta == 0 || respuesta == ('a'..'z').to_a
+	  #   vistoh = false
+	  # end
+
+	  #linea de codigo mas parecido a ruby
+	    # vistoh = false if respuesta == 0 || respuesta == ('a'..'z').to_a
+	      vistoh = respuesta != 0 || respuesta == ('a'..'z').to_a
+	end
+=end
 
 # until es a while lo que un less es a un if
-#until es una exprecion que se ejecunta cuando la exprecion es falsa, es el inveso de while
+# until es una expresion que se ejecunta cuando la exprecion es falsa, es el inveso de while
 
-# numero = 20
-#
-# print "adivina el numero: "
-# numero_user = gets().chomp.to_i
-#
-# # while numero_user != numero
-# #   print "incorrecto adivina de nuevo el numero: "
-# #   numero_user = gets().chomp.to_i
-# # end
-# # until numero_user == numero
-# #   print "incorrecto adivina de nuevo el numero: "
-# #   numero_user = gets().chomp.to_i
-# # end
-#
-# puts "Alfin adivinas !!!!!!"
+=begin
+	numero = 20
 
-#do while
+	print "adivina el numero: "
+	numero_user = gets().chomp.to_i
+
+	# while numero_user != numero
+	#   print "incorrecto adivina de nuevo el numero: "
+	#   numero_user = gets().chomp.to_i
+	# end
+	# until numero_user == numero
+	#   print "incorrecto adivina de nuevo el numero: "
+	#   numero_user = gets().chomp.to_i
+	# end
+
+	puts "Alfin adivinas !!!!!!"
+
+	do while
+=end
 
 numero = -1
 

@@ -39,6 +39,7 @@ calificacion = gets.chomp.to_f
 # === / Metodo utiliado en el case
 # ==
 
+# COLOCANDO EL PUTS EL VA A IMPRIMIR EL RESULTADO Y CON ELLO NOS AHORRAMOS COLOCAR PUTS EN CADA EVALUACION
 
 puts case calificacion
 when 10,11

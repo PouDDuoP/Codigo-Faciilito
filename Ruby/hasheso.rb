@@ -11,7 +11,7 @@ user_info = {tipo: 1, gm: "si"}
 # puts user.values
 
 # user.clear #.clear este metodo limpia el hash
-# user.delete(:edad) #.delete este metodo borra el elemneto de hash indicado
+# user.delete(:edad) #.delete este metodo borra el elemento de hash indicado
 # puts user.empty? #.empty este metodo nos indica si el hash esta vacio o no retornando como respuesta un booleano
 
 # puts user.key("kevin") # .index("") este metodo busca en el arreglo busca segun el valor y muestrra la llave que posee dicho valor

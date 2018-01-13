@@ -12,18 +12,22 @@
 # si fuera solo "puts i" mostraria del 0 al 9
 # "end" terminamos el cilco
 
-# 10.times do |i|
-#   puts i + 1
-# end
+=begin
+	10.times do |i|
+	  puts i + 1
+	end
+=end
 
 # -------------------
 
 # upto realiza el cilco partiendo de un numero incicial y subuendo hasta el numero qu queramos llegar
 # "1.upto(10)" inicia en 1 y llega hasta 10
-#
-# 1.upto(10) do |i|
-#   puts i
-# end
+
+=begin
+	1.upto(10) do |i|
+	  puts i
+	end
+=end
 
 # ------------------
 

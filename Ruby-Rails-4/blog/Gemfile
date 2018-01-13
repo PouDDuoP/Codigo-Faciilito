@@ -35,6 +35,12 @@ gem 'jbuilder', '~> 2.5'
  # gem 'devise', '~> 4.2.1', '>= 4.2.1'
 # gem 'devise', '~> 4.2'
 
+# gema de autienticacion
+gem 'devise', '~> 4.3'
+
+# gema
+gem 'bcrypt', '~> 3.1.11'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
